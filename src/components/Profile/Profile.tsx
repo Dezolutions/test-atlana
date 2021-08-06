@@ -1,6 +1,7 @@
 import React from 'react'
 import { IProfile } from '../../types'
 import axios  from 'axios'
+
 const Profile:React.FC<IProfile> = ({avatar_url,name,public_repos,login}) => {
 
   React.useEffect(() => {
@@ -19,7 +20,10 @@ const Profile:React.FC<IProfile> = ({avatar_url,name,public_repos,login}) => {
   },[])
   return (
     <div>
-      
+      <img src={avatar_url} alt="avatar" />
+      <h1>{name}</h1>
+      <p>Public repositories : {public_repos}</p>
+
     </div>
   )
 }
