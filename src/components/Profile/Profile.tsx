@@ -1,30 +1,29 @@
 import React from 'react'
-import { IProfile } from '../../types'
-import axios  from 'axios'
+import { IUser } from '../../types'
+import styles from './profile.module.css'
+import {useHistory,Link} from 'react-router-dom'
+import axios from 'axios'
 
-const Profile:React.FC<IProfile> = ({avatar_url,name,public_repos,login}) => {
-
+const Profile:React.FC<IUser> = ({avatar_url,login}) => {
+const history = useHistory()
+const [repCount,setRepCount] = React.useState<number>(0)
   React.useEffect(() => {
-    const fetchRepos = async () => {
-      try {
-        const {data} = await axios.get(`https://api.github.com/users/${login}/repos`)
-        console.log(data)
-        
-      } catch (error) {
-        
-      }
-      
+    const  fetchReposCount = async () => {
+      const {data:{public_repos}}:any = await axios.get(`https://api.github.com/users/${login.toLowerCase()}`,{headers:{authorization: "token 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"}})
+      setRepCount(public_repos)
     }
-     fetchRepos()
-
+    fetchReposCount()
   },[])
-  return (
-    <div>
-      <img src={avatar_url} alt="avatar" />
-      <h1>{name}</h1>
-      <p>Public repositories : {public_repos}</p>
 
-    </div>
+  return (
+    <Link className={styles.btn} to={`users/${login}`}>
+      <div className={styles.profile}>
+        <img className={styles.avatar} src={avatar_url} alt="avatar" />
+        <h1>{login}</h1>
+        <p>Public repositories :{repCount} </p>
+  
+      </div>
+    </Link>
   )
 }
 

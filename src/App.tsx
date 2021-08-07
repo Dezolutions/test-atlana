@@ -1,16 +1,17 @@
 import React from 'react'
 
+import ProfileList from './components/ProfileList/ProfileList'
+
 import SearchInput from './components/SearchInput/SearchInput'
 
 
 const App = () => {
 
-  
-
   return (
     <div>
       <h1>Github Searcher</h1>
       <SearchInput/>
+      <ProfileList/>
     </div>
   )
 }

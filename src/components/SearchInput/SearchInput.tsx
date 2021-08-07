@@ -17,7 +17,7 @@ const SearchInput = () => {
   return (
     <div>
       <DebounceInput
-        debounceTimeout={350}
+        debounceTimeout={550}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setVal(e.target.value)}
       />
       

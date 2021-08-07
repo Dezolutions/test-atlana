@@ -1,0 +1,22 @@
+.avatar {
+  width: 100px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.btn{
+  padding: 0;
+  background-color: transparent;
+  display: block;
+  margin: 10px 0 auto;
+  width: 97%;
+  cursor: pointer;
+  border: none;
+}
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px 0px rgb(211, 211, 211);
+  border-radius: 5px;
+  
+}

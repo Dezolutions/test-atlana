@@ -6,6 +6,7 @@ export interface IProfile {
 }
 
 export interface IUser {
+  id: string
   avatar_url?: string
   login: string
   public_repos?: number

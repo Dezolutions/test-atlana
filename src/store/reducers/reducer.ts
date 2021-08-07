@@ -1,5 +1,5 @@
 import { IUsersAction, IUserState } from "../../types"
-
+import axios from "axios"
 const initialState :IUserState= {
   users: []
 }
@@ -11,7 +11,7 @@ const reducer = (state = initialState, action:IUsersAction) => {
         ...state,
         users: action.users
       }
-  
+    
     default:
       return state
   }
