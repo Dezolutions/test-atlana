@@ -1,10 +1,13 @@
 import React from 'react'
+import { ISearchRepos } from '../../types'
 
-const SearchRepos = () => {
+const SearchRepos:React.FC<ISearchRepos> = ({...res}) => {
   return (
-    <div>
-      
-    </div>
+      <input 
+       {...res}
+       type='text'
+       placeholder="enter a name of repository"
+      />
   )
 }
 

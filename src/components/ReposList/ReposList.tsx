@@ -1,10 +1,12 @@
 import React from 'react'
-
-const ReposList = () => {
+import { IRepo, IReposList } from '../../types'
+import ReposItem from '../ReposItem/ReposItem'
+import {useSelector } from 'react-redux'
+const ReposList:React.FC<IReposList> = ({repos}) => {
   return (
-    <div>
-      
-    </div>
+    <ul>
+      {repos?.map((repo:any) => <ReposItem key={repo.id} {...repo}/>)}
+    </ul>
   )
 }
 

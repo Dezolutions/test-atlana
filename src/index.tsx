@@ -16,7 +16,6 @@ ReactDOM.render(
           <Route exact path='/users/:loginParam' component={ProfilePage}/>
         </Switch> 
       </Router>
-
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
