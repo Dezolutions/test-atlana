@@ -2,7 +2,7 @@ import React from 'react'
 import { ISearchRepos } from '../../types'
 import styles from './searchrepos.module.css'
 const SearchRepos:React.FC<ISearchRepos> = React.memo(({...res}) => {
-  console.log('rerender repos search')
+
   return (
       <input 
         className={styles.input}

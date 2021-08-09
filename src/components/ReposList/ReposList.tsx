@@ -5,7 +5,7 @@ import {TransitionGroup,CSSTransition} from 'react-transition-group'
 import './animation.css'
 
 const ReposList:React.FC<IReposList> = React.memo(({repos}) => {
-  console.log('reposlist rerender')
+  
   return (
     <TransitionGroup component="ul">
       {repos?.map((repo:IRepo) => 

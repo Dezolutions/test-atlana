@@ -18,11 +18,16 @@ const ProfilePage:React.FC = () => {
   
   React.useEffect(() => {
     const fetchRepos = async () => {
-      const {data} = await axios.get<IRepo[]>(`https://api.github.com/users/${loginParam}/repos`)
-      const {data:{followers,following,email,location,created_at,bio,login,avatar_url}} = await axios.get<IUserInfo>(`https://api.github.com/users/${loginParam}`)
-      setRepos(data)
-      setInfo({followers,following,email,location,created_at,bio,login,avatar_url})
-      setLoaded(true)
+      try {
+        const {data} = await axios.get<IRepo[]>(`https://api.github.com/users/${loginParam}/repos`)
+        const {data:{followers,following,email,location,created_at,bio,login,avatar_url}} = await axios.get<IUserInfo>(`https://api.github.com/users/${loginParam}`)
+        setRepos(data)
+        setInfo({followers,following,email,location,created_at,bio,login,avatar_url})
+        setLoaded(true)
+      } catch (error) {
+        alert(error)
+      }
+      
     }
     fetchRepos()
   },[])
