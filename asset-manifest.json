@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/test-atlana/static/css/main.bb3128ef.chunk.css",
+    "main.js": "/test-atlana/static/js/main.06e70c0f.chunk.js",
+    "main.js.map": "/test-atlana/static/js/main.06e70c0f.chunk.js.map",
+    "runtime-main.js": "/test-atlana/static/js/runtime-main.55e02e06.js",
+    "runtime-main.js.map": "/test-atlana/static/js/runtime-main.55e02e06.js.map",
+    "static/js/2.1af0d018.chunk.js": "/test-atlana/static/js/2.1af0d018.chunk.js",
+    "static/js/2.1af0d018.chunk.js.map": "/test-atlana/static/js/2.1af0d018.chunk.js.map",
+    "index.html": "/test-atlana/index.html",
+    "static/css/main.bb3128ef.chunk.css.map": "/test-atlana/static/css/main.bb3128ef.chunk.css.map",
+    "static/js/2.1af0d018.chunk.js.LICENSE.txt": "/test-atlana/static/js/2.1af0d018.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.55e02e06.js",
+    "static/js/2.1af0d018.chunk.js",
+    "static/css/main.bb3128ef.chunk.css",
+    "static/js/main.06e70c0f.chunk.js"
+  ]
+}
