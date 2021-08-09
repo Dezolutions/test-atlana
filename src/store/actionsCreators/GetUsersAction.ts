@@ -12,7 +12,7 @@ export const fetchUsers =  (payload:string) => async (dispatch:any) => {
   
   dispatch(setUsers(items))
   } catch (error) {
-    alert(error)
+    alert('Превышен лимит запросов(60 в час)')
   }
   
   

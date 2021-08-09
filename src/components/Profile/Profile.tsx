@@ -7,7 +7,7 @@ const Profile:React.FC<IUser> = ({avatar_url,login,public_repos}) => {
 
   return (
     
-      <Link className={styles.btn} to={`users/${login}`}>
+      <Link className={styles.btn} to={`/test-atlana/users/${login}`}>
         <div className={styles.profile}>
           <img className={styles.avatar} src={avatar_url} alt="avatar" />
           <h1>{login}</h1>

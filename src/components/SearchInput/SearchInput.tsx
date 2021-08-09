@@ -17,7 +17,7 @@ const SearchInput = () => {
       <div style={{textAlign: 'center'}} >
         <DebounceInput
           className={styles.input}
-          debounceTimeout={350}
+          debounceTimeout={550}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setVal(e.target.value)}
         />
       </div>

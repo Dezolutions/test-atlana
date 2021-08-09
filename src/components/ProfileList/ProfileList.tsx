@@ -16,7 +16,7 @@ const ProfileList:React.FC = () => {
 
           <CSSTransition       
             key={user.id}
-            timeout={500}
+            timeout={400}
             in={true}
             classNames="list"
           >
