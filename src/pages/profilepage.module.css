@@ -1,0 +1,28 @@
+.profileBlock {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+}
+.login {
+  font-size: 25px;
+  line-height: 25px;
+}
+.info {
+  font-size: 22px;
+}
+.info p {
+  margin-bottom: 7px;
+}
+.avatar {
+  width: 200px;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+
+.profileBlockTop {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  text-align: left;
+}

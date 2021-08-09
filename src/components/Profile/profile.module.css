@@ -7,7 +7,7 @@
   padding: 0;
   background-color: transparent;
   display: block;
-  margin: 10px 0 auto;
+  margin: 10px  auto;
   width: 97%;
   cursor: pointer;
   border: none;
@@ -19,4 +19,8 @@
   box-shadow: 0 0 10px 0px rgb(211, 211, 211);
   border-radius: 5px;
   
+}
+
+.repos{
+  padding: 10px 20px 10px 10px;
 }

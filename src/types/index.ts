@@ -37,7 +37,7 @@ export interface IUserState {
 export interface IRepo {
   id: number
   name:string
-  url: string
+  html_url: string
   forks:number
   stargazers_count:number
 

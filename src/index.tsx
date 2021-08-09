@@ -8,7 +8,7 @@ import store from './store'
 import ProfilePage from './pages/ProfilePage';
 
 ReactDOM.render(
-  <React.StrictMode>
+  
     <Provider store={store}>
       <Router>
         <Switch>
@@ -17,7 +17,7 @@ ReactDOM.render(
         </Switch> 
       </Router>
     </Provider>
-  </React.StrictMode>,
+  ,
   document.getElementById('root')
 );
 

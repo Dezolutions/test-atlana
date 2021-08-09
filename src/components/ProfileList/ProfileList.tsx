@@ -1,16 +1,33 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
-import { IUser, IUserState } from '../../types'
+import { IUser} from '../../types'
 import Profile from '../Profile/Profile'
+import {TransitionGroup,CSSTransition} from 'react-transition-group'
 
-const ProfileList = () => {
-  const users :IUser[] = useSelector(({usersReducer}:any) => usersReducer?.users)
+import './animation.css'
+const ProfileList:React.FC = () => {
+  const users :IUser[] = useSelector((state:any) => state.users)
 
   return (
-    <ul>
-      {users.map((user:IUser) =>  <Profile key={user.id} {...user}/>)}
+    <TransitionGroup component="ul" >
       
-    </ul>
+        
+          {users.map((user:IUser) => 
+
+          <CSSTransition       
+            key={user.id}
+            timeout={500}
+            in={true}
+            classNames="list"
+          >
+            <Profile key={user.id} {...user}/>
+          </CSSTransition>
+          
+          )}
+          
+        
+      
+    </TransitionGroup>
   )
   
 }

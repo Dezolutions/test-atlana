@@ -5,7 +5,7 @@ import SearchInput from './components/SearchInput/SearchInput'
 const App:React.FC = () => {
   return (
     <div>
-      <h1>Github Searcher</h1>
+      <h1 style={{textAlign: 'center'}}>Github Searcher</h1>
       <SearchInput/>
       <ProfileList/>
     </div>
